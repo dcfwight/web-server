@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var PORT = process.env.port || 3000; // set variable in UPPERCASE to signify it shouldn't be changed. It's a CONSTANT.
+var PORT = process.env.PORT || 3000; // set variable in UPPERCASE to signify it shouldn't be changed. It's a CONSTANT.
 // NB - 3000 is the local port to use - not used by many other applications
 // process.env.port is given by Heroku. So we use one OR the other. If there is no process.env.port for the local server, it just tries the other.
 // so if you still try it locally it will work, as it tries port 3000, after first doesn't work.
