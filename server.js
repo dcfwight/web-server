@@ -16,7 +16,7 @@ var middleware = {
 // the req.originalUrl will return '/' as this was the root of the site.
 // if you navigate to about, it wll return '/about'
 // if you hard reload, (ctrl, shift, r), terminal will show GET / favicon.ico. favicon.ico is chrome's small image inside the tab in chrome - the little logo 
-// for the website.
+// for the website
 
 app.use(middleware.requireAuthentication); // order is important - if you put this below the about /route, it would never run. So it has to be up top.
 // when you access these pages on the browser, the console (NOT the browser) will log 'private route hit'
@@ -42,7 +42,7 @@ app.use(middleware.logger);
 
 
 app.get('/about', function(req,res){
-    res.send('About us')
+    res.send('About us!')
 });
 
 
