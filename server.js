@@ -42,7 +42,7 @@ app.get('/about', function(req,res){
 
 // this console log shows how easy it is to find the directory path, as you need to use the full path in app.use
 console.log("Directory path ('__dirname') is: "+__dirname);
-app.use(express.static(__dirname+'/public')); // this is the way to point the server to an entire file system on your computer
+app.use(express.static(__dirname+'/public')); // this is the way to point the server to an entire file system on your computer to look for assets.
 // if you use your browser and go to localhost:3000/index.html, it will find the html file in /public. You could access any document inside that folder.
 
 // NOTE - if you commented out lines 8 - 10, which specify what happens if you enter the route folder, then it will automatically look in the
