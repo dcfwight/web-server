@@ -1,11 +1,13 @@
 var middleware = {
     requireAuthentication: function(req, res, next) {
         console.log("Private route hit!");
-        next(); // this is route level middleware - not sure what the next call does yet.
+        next(); // the next function is the callback function. It allows the next function to be called in a route (see the server.js for how it works)
     },
     logger: function(req, res, next){
         var date = new Date().toString();
-        console.log('Request: '+ date + ' ' + req.method + ' ' +req.originalUrl);
+        console.log('Req received: '+ date + ' ' + req.method + ' ' +req.originalUrl);
+        console.log('Res sent back: ');
+        //console.log(res);
         next();
     }
 };
